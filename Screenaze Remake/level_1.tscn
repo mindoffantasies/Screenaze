@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://7jo70tk8k7k8"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_31ank"]
+[ext_resource type="MeshLibrary" uid="uid://qjwbg6rgtv2m" path="res://lvl1.tres" id="1_yhdkw"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_h0bi3"]
+height = 1.5
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nwn1o"]
+
+[node name="level1" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 4, 1)
+script = ExtResource("1_31ank")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_h0bi3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("ConvexPolygonShape3D_nwn1o")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_yhdkw")
+data = {
+"cells": PackedInt32Array(4, 0, 2, 5, 0, 1, 6, 0, 655362, 6, 65535, 2)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
