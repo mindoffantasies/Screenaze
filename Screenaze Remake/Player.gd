@@ -27,6 +27,9 @@ func get_input(delta):
 		rotate_y(-4 * delta)
 	if Input.is_action_pressed("Turn left"):
 		rotate_y(4 * delta)
+	
+	if Input.is_action_pressed("Esc"):
+		get_tree().quit()
 
 	print(direction)
 

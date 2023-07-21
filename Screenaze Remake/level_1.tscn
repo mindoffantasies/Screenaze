@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://7jo70tk8k7k8"]
+[gd_scene load_steps=6 format=3 uid="uid://7jo70tk8k7k8"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_31ank"]
-[ext_resource type="MeshLibrary" uid="uid://qjwbg6rgtv2m" path="res://lvl1.tres" id="1_yhdkw"]
+[ext_resource type="MeshLibrary" uid="uid://b27pdgm6yrg4u" path="res://Tiles.tres" id="2_77a17"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h0bi3"]
 height = 1.5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nwn1o"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x1nkw"]
 
 [node name="level1" type="Node3D"]
 
@@ -23,8 +25,13 @@ mesh = SubResource("CapsuleMesh_h0bi3")
 shape = SubResource("ConvexPolygonShape3D_nwn1o")
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("1_yhdkw")
+mesh_library = ExtResource("2_77a17")
 data = {
 "cells": PackedInt32Array(4, 0, 2, 5, 0, 1, 6, 0, 655362, 6, 65535, 2)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GridMap"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GridMap/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_x1nkw")
