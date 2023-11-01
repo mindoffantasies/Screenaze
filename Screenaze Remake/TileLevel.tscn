@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi6uym4tnnoxe"]
-
-[ext_resource type="PackedScene" uid="uid://dsjc3nkq1jaui" path="res://Screenaze.glb" id="1_exlfq"]
-
-[node name="Screenaze" instance=ExtResource("1_exlfq")]
