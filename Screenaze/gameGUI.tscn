@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dke8j2h7xdi73"]
+
+[ext_resource type="Texture2D" uid="uid://ppp2vj3hpd27" path="res://Cube.png" id="1_d1iy0"]
+[ext_resource type="FontFile" uid="uid://dwebxae2ce01g" path="res://Kenney Pixel.ttf" id="2_5rjt7"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CubeGUI" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(41.5, 37.7841)
+scale = Vector2(1.56818, 1.56818)
+texture = ExtResource("1_d1iy0")
+
+[node name="Cube" type="Label" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 2.0
+offset_right = 201.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("2_5rjt7")
+theme_override_font_sizes/font_size = 82
+text = "X0"
+
+[node name="Lvl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1853.0
+offset_top = -3.0
+offset_right = 1924.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_5rjt7")
+theme_override_font_sizes/font_size = 82
+text = "0"
+horizontal_alignment = 1

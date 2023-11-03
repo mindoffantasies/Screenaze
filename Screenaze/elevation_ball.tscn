@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm36iulrdkhj5"]
+
+[ext_resource type="Texture2D" uid="uid://cqy6v7isw2rbd" path="res://ComplexRasier.png" id="1_hiwo7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1tgfb"]
+
+[node name="ElevationBall" type="Sprite3D"]
+texture = ExtResource("1_hiwo7")
+hframes = 4
+frame = 2
+
+[node name="BallBody" type="StaticBody3D" parent="."]
+
+[node name="BallColShape" type="CollisionShape3D" parent="BallBody"]
+shape = SubResource("SphereShape3D_1tgfb")
