@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5s2fwipcvsuo"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_0h8d2"]
+[ext_resource type="PackedScene" uid="uid://dke8j2h7xdi73" path="res://gameGUI.tscn" id="2_osgtr"]
+[ext_resource type="PackedScene" uid="uid://bjukh1r6ffeds" path="res://pause.tscn" id="3_me4ur"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_tt42w"]
+radius = 0.1
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lq0pb"]
+radius = 0.1
+height = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_sujqy"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-0.999721, 0, -0.0236123, 0, 1, 0, 0.0236123, 0, -0.999721, -3.14296, 0.0356538, 0.9348)
+script = ExtResource("1_0h8d2")
+
+[node name="PlayerMesh" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_tt42w")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_lq0pb")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_lq0pb")
+
+[node name="Neck" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00231481, 0, -0.0980082)
+visible = false
+mesh = SubResource("BoxMesh_sujqy")
+
+[node name="Camera3D" type="Camera3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00231481, 0, 0.0980082)
+current = true
+
+[node name="GUI" parent="Neck/Camera3D" instance=ExtResource("2_osgtr")]
+clip_children = 2
+
+[node name="Pause" parent="Neck/Camera3D" instance=ExtResource("3_me4ur")]
+visible = false
+top_level = true
+clip_children = 2

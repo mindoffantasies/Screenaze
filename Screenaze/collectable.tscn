@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://cq2v4nf2csd0x"]
+
+[ext_resource type="Texture2D" uid="uid://ygdbdbwcqceu" path="res://CubeColectable1.png" id="1_jq4ut"]
+[ext_resource type="Script" path="res://collectable.gd" id="1_wy8yg"]
+[ext_resource type="Texture2D" uid="uid://dug0ynt82vpoh" path="res://CubeColectable2.png" id="2_b00bl"]
+[ext_resource type="Texture2D" uid="uid://bp03kvgioxjgc" path="res://CubeColectable3.png" id="3_rtgvn"]
+[ext_resource type="Texture2D" uid="uid://bbxqf61ksoa5k" path="res://CubeColectable4.png" id="4_8f0x1"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_r61j4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08hdr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jq4ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b00bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rtgvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8f0x1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Collectable" type="Area3D"]
+script = ExtResource("1_wy8yg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_r61j4")
+
+[node name="Animation" type="AnimatedSprite3D" parent="."]
+layers = 2
+sprite_frames = SubResource("SpriteFrames_08hdr")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://uxpb5j1p7l1h"]
+
+[ext_resource type="Script" path="res://elevator.gd" id="1_ibb50"]
+[ext_resource type="Texture2D" uid="uid://d33ov4k4gkwxb" path="res://ComplexRasier1.png" id="1_jdnb4"]
+[ext_resource type="Texture2D" uid="uid://bu2iwlnv8e1r3" path="res://ComplexRasier2.png" id="2_fmxp0"]
+[ext_resource type="Texture2D" uid="uid://cskrr6t5grjsi" path="res://ComplexRasier3.png" id="3_4pnac"]
+[ext_resource type="Texture2D" uid="uid://b6wy73jahgbjo" path="res://ComplexRasier4.png" id="4_3ihp7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3djmd"]
+radius = 0.383811
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nvrjd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jdnb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fmxp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4pnac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3ihp7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Elevator" type="Area3D"]
+script = ExtResource("1_ibb50")
+
+[node name="EleCol" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_3djmd")
+
+[node name="Animation" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nvrjd")
+frame_progress = 0.225732
