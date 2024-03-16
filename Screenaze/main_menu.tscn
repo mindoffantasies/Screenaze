@@ -9,21 +9,42 @@
 [ext_resource type="Texture2D" uid="uid://6jtmcbx4hcmv" path="res://Quit2.png" id="5_1rqwc"]
 [ext_resource type="Texture2D" uid="uid://htdqd3cjgo5d" path="res://Logo.png" id="5_y0aj1"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="BackGround" type="Sprite2D" parent="."]
 texture_filter = 1
-texture_repeat = 1
-position = Vector2(960, 539.043)
-scale = Vector2(29.9687, 16.8451)
+texture_repeat = 2
+position = Vector2(161, 112)
 texture = ExtResource("1_lidnc")
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 800)
+
+[node name="Title" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(169, 28)
+scale = Vector2(2, 2)
+texture = ExtResource("5_y0aj1")
 
 [node name="btnPlay" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 777.0
-offset_top = 594.0
-offset_right = 1209.0
-offset_bottom = 702.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -23.0
+offset_right = 27.5
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
 action_mode = 0
 texture_normal = ExtResource("2_l0kpo")
 texture_pressed = ExtResource("3_baekj")
@@ -33,22 +54,24 @@ script = ExtResource("4_dpoel")
 
 [node name="btnQuit" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 782.0
-offset_top = 834.0
-offset_right = 1209.0
-offset_bottom = 956.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -7.0
+offset_right = 27.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
 action_mode = 0
 texture_normal = ExtResource("4_podww")
 texture_hover = ExtResource("5_1rqwc")
 texture_focused = ExtResource("5_1rqwc")
 stretch_mode = 5
 script = ExtResource("5_0djnp")
-
-[node name="Title" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(1024.86, 322.5)
-scale = Vector2(8.5, 8.5)
-texture = ExtResource("5_y0aj1")
 
 [connection signal="pressed" from="btnPlay" to="btnPlay" method="_on_pressed"]
 [connection signal="pressed" from="btnQuit" to="btnQuit" method="_on_pressed"]

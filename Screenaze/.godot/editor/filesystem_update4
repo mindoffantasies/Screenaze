@@ -1,0 +1,13 @@
+res://main_menu.tscn
+res://Test.tscn
+res://Screenaze.tres
+res://pause.gd
+res://elevator.gd
+res://Quit.gd
+res://Player.gd
+res://Goal.gd
+res://collectable.gd
+res://gameGUI.tscn
+res://player.tscn
+res://pause.tscn
+res://Hud.gd

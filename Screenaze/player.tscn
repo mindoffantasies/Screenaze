@@ -15,7 +15,7 @@ height = 1.0
 [sub_resource type="BoxMesh" id="BoxMesh_sujqy"]
 size = Vector3(0.1, 0.1, 0.1)
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(-0.999721, 0, -0.0236123, 0, 1, 0, 0.0236123, 0, -0.999721, -3.14296, 0.0356538, 0.9348)
 script = ExtResource("1_0h8d2")
 

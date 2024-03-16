@@ -20,11 +20,11 @@ sky = SubResource("Sky_int34")
 
 [node name="testLvl" type="Node3D"]
 
-[node name="Collectable" parent="." instance=ExtResource("4_ceigq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94419, -0.590688, 6.97885)
-
 [node name="Player" parent="." instance=ExtResource("1_pmatk")]
 transform = Transform3D(-0.999721, 0, -0.0236123, 0, 1, 0, 0.0236123, 0, -0.999721, -2.96504, -0.490868, 0.9348)
+
+[node name="Collectable" parent="." instance=ExtResource("4_ceigq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94419, -0.590688, 6.97885)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_cpvlb")
@@ -37,7 +37,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[connection signal="area_entered" from="Collectable" to="Player" method="_on_collectable_area_entered"]
 [connection signal="area_entered" from="Player/Area3D" to="Collectable" method="_on_collectable_area_entered"]
+[connection signal="area_entered" from="Collectable" to="Player" method="_on_collectable_area_entered"]
 
 [editable path="Player"]
