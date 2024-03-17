@@ -20,10 +20,10 @@ script = ExtResource("1_sneo2")
 [node name="btnPlay" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 776.0
-offset_top = 594.0
-offset_right = 1208.0
-offset_bottom = 702.0
+offset_left = 259.0
+offset_top = 143.0
+offset_right = 415.0
+offset_bottom = 182.0
 action_mode = 0
 texture_normal = ExtResource("1_ns700")
 texture_pressed = ExtResource("2_tig6b")
@@ -33,10 +33,10 @@ stretch_mode = 5
 [node name="btnQuit" type="TextureButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 776.0
-offset_top = 835.0
-offset_right = 1203.0
-offset_bottom = 957.0
+offset_left = 261.0
+offset_top = 227.0
+offset_right = 415.0
+offset_bottom = 271.0
 action_mode = 0
 texture_normal = ExtResource("3_yb0ay")
 texture_hover = ExtResource("4_hi3qx")
@@ -46,8 +46,8 @@ script = ExtResource("5_dpbgj")
 
 [node name="Title" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(990.86, 322.5)
-scale = Vector2(8.5, 8.5)
+position = Vector2(342, 59)
+scale = Vector2(3.58929, 3.58929)
 texture = ExtResource("6_javfm")
 
 [connection signal="pressed" from="btnPlay" to="." method="_on_btn_play_pressed"]
