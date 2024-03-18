@@ -30,10 +30,14 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("turnRight"):
 		player.rotate_y(-0.1)
 	if Input.is_action_pressed("Move"):
-		var direction = (transform.basis * Vector3(-camera.global_position.x, 0, -camera.global_position.z)).normalized()
+		#var direction = (transform.basis * Vector3(-camera.global_position.x, 0, -camera.global_position.z)).normalized()
+
+		#Fixed Your Code, Planks!
+
+		var direction = transform.basis.z
 		if direction:
-			velocity.x = direction.x * SPEED
-			velocity.z = direction.z * SPEED
+			velocity.x = direction.x * -SPEED
+			velocity.z = direction.z * -SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)

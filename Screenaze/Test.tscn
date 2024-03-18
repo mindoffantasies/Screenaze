@@ -22,7 +22,10 @@ sky = SubResource("Sky_int34")
 [node name="testLvl" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_pmatk")]
-transform = Transform3D(-0.999721, 0, -0.0236123, 0, 1, 0, 0.0236123, 0, -0.999721, -2.96504, -0.490868, 0.9348)
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -2.98054, -0.481249, 1.41242)
+
+[node name="Camera3D" parent="Player/Neck" index="0"]
+current = false
 
 [node name="Collectable" parent="." instance=ExtResource("4_ceigq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94419, -0.590688, 6.97885)
@@ -34,15 +37,12 @@ transform = Transform3D(0.0104892, 0, 0.999945, 0, 1, 0, -0.999945, 0, 0.0104892
 environment = SubResource("Environment_cpvlb")
 
 [node name="Map" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00230169, 0, 0.0277247)
 mesh_library = ExtResource("4_jf3gj")
 data = {
 "cells": PackedInt32Array(-2, 0, 1048584, -2, 1, 1048576, -2, 2, 1048576, -2, 3, 655363, -1, 3, 655360, -65536, 3, 655360, -65535, 3, 655361, -65534, 3, 655360, -65533, 3, 655369)
 }
-metadata/_editor_floor_ = Vector3(0, -1, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[connection signal="area_entered" from="Player/Area3D" to="Collectable" method="_on_collectable_area_entered"]
-[connection signal="area_entered" from="Player/Area3D" to="Elevator" method="_on_elevator_entered"]
 [connection signal="area_entered" from="Collectable" to="Player" method="_on_collectable_area_entered"]
 
 [editable path="Player"]

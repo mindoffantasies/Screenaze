@@ -16,7 +16,7 @@ height = 1.0
 size = Vector3(0.1, 0.1, 0.1)
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
-transform = Transform3D(-0.999721, 0, -0.0236123, 0, 1, 0, 0.0236123, 0, -0.999721, -3.14296, 0.0356538, 0.9348)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_0h8d2")
 
 [node name="PlayerMesh" type="MeshInstance3D" parent="."]
@@ -40,7 +40,7 @@ visible = false
 mesh = SubResource("BoxMesh_sujqy")
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00231481, 0, 0.0980082)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.098)
 current = true
 
 [node name="GUI" parent="Neck/Camera3D" instance=ExtResource("2_osgtr")]

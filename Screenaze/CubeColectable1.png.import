@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ygdbdbwcqceu"
-path.s3tc="res://.godot/imported/CubeColectable1.png-d6bdcc8887b6b27b139d9387f1b5180f.s3tc.ctex"
+path="res://.godot/imported/CubeColectable1.png-d6bdcc8887b6b27b139d9387f1b5180f.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://CubeColectable1.png"
-dest_files=["res://.godot/imported/CubeColectable1.png-d6bdcc8887b6b27b139d9387f1b5180f.s3tc.ctex"]
+dest_files=["res://.godot/imported/CubeColectable1.png-d6bdcc8887b6b27b139d9387f1b5180f.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

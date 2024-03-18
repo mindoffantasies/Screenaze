@@ -1,9 +1,13 @@
-res://elevator.tscn
+res://main_menu.tscn
 res://Screenaze.tres
 res://Test.tscn
-res://main_menu.tscn
 res://player.tscn
 res://gameGUI.tscn
 res://pause.tscn
+res://collectable.gd
+res://pause.gd
 res://collectable.tscn
+res://elevator.tscn
 res://elevator.gd
+res://Player.gd
+res://Hud.gd

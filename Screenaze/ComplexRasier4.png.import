@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6wy73jahgbjo"
-path.s3tc="res://.godot/imported/ComplexRasier4.png-9baa7360bf4613bac15ea1907b5d4a15.s3tc.ctex"
+path="res://.godot/imported/ComplexRasier4.png-9baa7360bf4613bac15ea1907b5d4a15.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://ComplexRasier4.png"
-dest_files=["res://.godot/imported/ComplexRasier4.png-9baa7360bf4613bac15ea1907b5d4a15.s3tc.ctex"]
+dest_files=["res://.godot/imported/ComplexRasier4.png-9baa7360bf4613bac15ea1907b5d4a15.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

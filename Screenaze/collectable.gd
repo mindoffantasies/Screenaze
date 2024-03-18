@@ -11,9 +11,11 @@ func _ready():
 	animation.play("default")
 
 
-func _on_collectable_area_entered(_area):
-	collected += 1
-	print(collected)
-	hud.update_cube(collected)
-	self.queue_free()
-
+#Connected the signal to the collectable instead of the player.
+func _player_collected(body:Node3D):
+	# Check if the body is a player.
+	if body.is_in_group("player"):
+		collected += 1
+		print(collected)
+		hud.update_cube(collected)
+		self.queue_free()

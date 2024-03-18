@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://uxpb5j1p7l1h"]
 
 [ext_resource type="Script" path="res://elevator.gd" id="1_k5n8a"]
-[ext_resource type="Texture2D" uid="uid://d33ov4k4gkwxb" path="res://ComplexRasier.png" id="2_slxqv"]
 [ext_resource type="Texture2D" uid="uid://bu2iwlnv8e1r3" path="res://ComplexRasier2.png" id="3_17h1j"]
+[ext_resource type="Texture2D" uid="uid://d33ov4k4gkwxb" path="res://ComplexRasier.png" id="3_bmq0m"]
 [ext_resource type="Texture2D" uid="uid://cskrr6t5grjsi" path="res://ComplexRasier3.png" id="4_5wkxh"]
 [ext_resource type="Texture2D" uid="uid://b6wy73jahgbjo" path="res://ComplexRasier4.png" id="5_6cw5b"]
 
@@ -12,20 +12,20 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_slxqv")
-}, {
-"duration": 1.0,
 "texture": ExtResource("3_17h1j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5wkxh")
+"texture": ExtResource("3_bmq0m")
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_6cw5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5wkxh")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Elevator" type="Area3D"]
@@ -35,6 +35,9 @@ script = ExtResource("1_k5n8a")
 shape = SubResource("SphereShape3D_s1gwl")
 
 [node name="Animation" type="AnimatedSprite3D" parent="."]
+billboard = 1
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_pkhi5")
-frame = 3
-frame_progress = 0.94899
+frame_progress = 0.814959
+
+[connection signal="body_entered" from="." to="." method="_elevator"]

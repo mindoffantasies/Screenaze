@@ -8,7 +8,11 @@ extends Area3D
 func _ready():
 	animation.play("default")
 
-
-func _on_elevator_entered(_area):
+#Same as the collectabe.gd.
+func _elevator(body:Node3D):
 	print(pos)
-	camera.rotate_z(6)
+
+	#Check for the player group.
+	if body.is_in_group("player"):
+		camera.rotate_z(6)
+

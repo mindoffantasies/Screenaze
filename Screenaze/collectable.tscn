@@ -36,4 +36,8 @@ shape = SubResource("SphereShape3D_r61j4")
 
 [node name="Animation" type="AnimatedSprite3D" parent="."]
 layers = 2
+billboard = 1
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_08hdr")
+
+[connection signal="body_entered" from="." to="." method="_player_collected"]
