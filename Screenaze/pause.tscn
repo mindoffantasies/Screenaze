@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c8sfsem7qw0iy" path="res://Contiune2.png" id="2_tig6b"]
 [ext_resource type="Texture2D" uid="uid://q220puy51im7" path="res://Quit1.png" id="3_yb0ay"]
 [ext_resource type="Texture2D" uid="uid://6jtmcbx4hcmv" path="res://Quit2.png" id="4_hi3qx"]
-[ext_resource type="Script" path="res://Quit.gd" id="5_dpbgj"]
 [ext_resource type="Texture2D" uid="uid://bj017yflt1sq1" path="res://Paused.png" id="6_javfm"]
+[ext_resource type="Script" path="res://QuitToMain.gd" id="6_n2vdw"]
 
 [node name="Pause" type="Control"]
 layout_mode = 3
@@ -42,7 +42,7 @@ texture_normal = ExtResource("3_yb0ay")
 texture_hover = ExtResource("4_hi3qx")
 texture_focused = ExtResource("4_hi3qx")
 stretch_mode = 5
-script = ExtResource("5_dpbgj")
+script = ExtResource("6_n2vdw")
 
 [node name="Title" type="Sprite2D" parent="."]
 texture_filter = 1

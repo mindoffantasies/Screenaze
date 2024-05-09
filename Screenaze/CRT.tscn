@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4k3jkgyha2yy"]
+
+[ext_resource type="Shader" path="res://crt.gdshader" id="1_dqn73"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_chgd8"]
+shader = ExtResource("1_dqn73")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 128
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_chgd8")
+offset_right = 640.0
+offset_bottom = 361.0
+mouse_filter = 2

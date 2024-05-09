@@ -1,8 +1,10 @@
 extends Area3D
 @onready var animation = $"Animation"
-@onready var player = get_node("../Player")
+@onready var player = get_tree().get_first_node_in_group("player")
 @onready var pos = player.global_position.y
-@onready var camera = get_node("../Player/Neck/Camera3D")
+@onready var camera = player.get_node("Neck/Camera3D")
+
+@onready var stage = get_tree().get_first_node_in_group("stage")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,5 +16,5 @@ func _elevator(body:Node3D):
 
 	#Check for the player group.
 	if body.is_in_group("player"):
-		camera.rotate_z(6)
+		stage.scale.y = stage.scale.y * -1
 

@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfj381l0lmkbl"
-path.s3tc="res://.godot/imported/WoodenFloor.png-2c6318a5cb9999e74d4eca0639dbc6ab.s3tc.ctex"
+path="res://.godot/imported/WoodenFloor.png-2c6318a5cb9999e74d4eca0639dbc6ab.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://WoodenFloor.png"
-dest_files=["res://.godot/imported/WoodenFloor.png-2c6318a5cb9999e74d4eca0639dbc6ab.s3tc.ctex"]
+dest_files=["res://.godot/imported/WoodenFloor.png-2c6318a5cb9999e74d4eca0639dbc6ab.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

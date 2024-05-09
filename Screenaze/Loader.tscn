@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://coofft1ifrom6"]
+
+[ext_resource type="Script" path="res://Loader.gd" id="1_0bipe"]
+[ext_resource type="Texture2D" uid="uid://dvr0e1pftqm7l" path="res://loader1.png" id="1_vb06h"]
+
+[node name="Loader" type="Node2D"]
+script = ExtResource("1_0bipe")
+
+[node name="Loader1" type="Sprite2D" parent="."]
+texture = ExtResource("1_vb06h")
+centered = false

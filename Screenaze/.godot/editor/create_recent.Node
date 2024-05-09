@@ -1,3 +1,8 @@
+GridMap
+MeshInstance3D
+CSGBox3D
+ColorRect
+CanvasLayer
 TextureRect
 AnimatedSprite3D
 CollisionShape3D
