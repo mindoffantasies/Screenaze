@@ -1,11 +1,26 @@
 extends Area3D
+@onready var player = get_tree().get_first_node_in_group("player")
+@onready var goalMenu = player.get_node("Neck/Camera3D/GoalMenu")
+@onready var label = goalMenu.get_node("Result")
+@onready var pause = player.get_node("Neck/Camera3D/Pause")
+@onready var GUI = player.get_node("Neck/Camera3D/GUI")
+@onready var collected = player.collected
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var goaled = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _goal_entered(body:Node3D):
+	if body.is_in_group("player"):
+		!goaled
+		goalMenu.show()
+		GUI.hide()
+		print("Collectables:" + str(collected))
+		goalMenu.update_ui(collected)
+		if goaled == true:
+			if Input.is_action_pressed("Enter"):
+				Globals.load_level("res://main_menu.tscn")
+				!goaled
+			if Input.is_action_pressed("Esc"):
+				pause.hide()
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

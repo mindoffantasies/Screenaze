@@ -17,4 +17,4 @@ func _elevator(body:Node3D):
 	#Check for the player group.
 	if body.is_in_group("player"):
 		stage.scale.y = stage.scale.y * -1
-
+		print(stage.scale.y)

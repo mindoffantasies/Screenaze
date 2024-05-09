@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn7hglj8x32tt"]
+[gd_scene load_steps=10 format=3 uid="uid://bn7hglj8x32tt"]
 
 [ext_resource type="PackedScene" uid="uid://b5s2fwipcvsuo" path="res://player.tscn" id="1_pmatk"]
 [ext_resource type="Texture2D" uid="uid://dahfemlwrxjro" path="res://Cloud.png" id="2_cy66k"]
 [ext_resource type="PackedScene" uid="uid://uxpb5j1p7l1h" path="res://elevator.tscn" id="3_yebqh"]
 [ext_resource type="PackedScene" uid="uid://cq2v4nf2csd0x" path="res://collectable.tscn" id="4_ceigq"]
 [ext_resource type="MeshLibrary" uid="uid://dpol1gt3nq82s" path="res://ScreenNaze2.tres" id="5_p3vbw"]
+[ext_resource type="PackedScene" uid="uid://js0pqe1gl5wq" path="res://goal.tscn" id="6_mkn0i"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1wspg"]
 panorama = ExtResource("2_cy66k")
@@ -46,6 +47,13 @@ transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 2.9441
 [node name="Elevator" parent="GridMap" instance=ExtResource("3_yebqh")]
 transform = Transform3D(-0.010489, 0, -0.999945, 0, 1, 0, 0.999945, 0, -0.010489, -1.02553, -0.996678, -7.082)
 
+[node name="Elevator2" parent="GridMap" instance=ExtResource("3_yebqh")]
+transform = Transform3D(-0.99978, 0, 0.0209768, 0, 1, 0, -0.0209768, 0, -0.99978, -4.93316, 1.00664, -7.03319)
+
+[node name="Goal" parent="GridMap" instance=ExtResource("6_mkn0i")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15, -1.5, -13)
+
 [connection signal="area_entered" from="GridMap/Collectable" to="Player" method="_on_collectable_area_entered"]
+[connection signal="body_entered" from="GridMap/Goal" to="GridMap/Goal" method="_goal_entered"]
 
 [editable path="Player"]

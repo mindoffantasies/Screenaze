@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5s2fwipcvsuo"]
+[gd_scene load_steps=8 format=3 uid="uid://b5s2fwipcvsuo"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_0h8d2"]
+[ext_resource type="PackedScene" uid="uid://xscy2rnuryyq" path="res://goal_menu.tscn" id="2_63soe"]
 [ext_resource type="PackedScene" uid="uid://dke8j2h7xdi73" path="res://gameGUI.tscn" id="2_osgtr"]
 [ext_resource type="PackedScene" uid="uid://bjukh1r6ffeds" path="res://pause.tscn" id="3_me4ur"]
 
@@ -42,6 +43,9 @@ mesh = SubResource("BoxMesh_sujqy")
 [node name="Camera3D" type="Camera3D" parent="Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.098)
 current = true
+
+[node name="GoalMenu" parent="Neck/Camera3D" instance=ExtResource("2_63soe")]
+visible = false
 
 [node name="GUI" parent="Neck/Camera3D" instance=ExtResource("2_osgtr")]
 clip_children = 2
