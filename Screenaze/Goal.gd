@@ -7,21 +7,11 @@ extends Area3D
 #@onready var collected = player.collected
 
 
-var goaled = false
-
-
 func _goal_entered(body:Node3D):
 	if body.is_in_group("player"):
-		!goaled
+		player.goaled = true
 		goalMenu.show()
 		GUI.hide()
 		#Refer to collectable.gd for more info.
 		print("Collectables:" + str(player.collected))
-		goalMenu.update_ui(player.collected)
-		if goaled == true:
-			if Input.is_action_pressed("Enter"):
-				Globals.load_level("res://main_menu.tscn")
-				!goaled
-			if Input.is_action_pressed("Esc"):
-				pause.hide()
-				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		goalMenu.update_ui(player.collected, player.minute, player.second)
