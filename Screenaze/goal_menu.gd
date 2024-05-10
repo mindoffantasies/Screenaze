@@ -4,12 +4,7 @@ extends Control
 @onready var goal = get_tree().get_first_node_in_group("goal")
 
 func update_ui(amount, m, s):
-	var scn
-	if get_tree().current_scene.name == "Demo":
-		scn = "Demo"
-	if get_tree().current_scene.name == "testLvl":
-		scn = "Test"
-	label.text = "Level: " + str(scn) + "\nTime: " + str(m) + ":" + str(s) + "\nCollectables: " + str(amount)
+	label.text = "Level: " + str(player.scn) + "\nTime: " + str(m) + ":" + str(s) + "\nCollectables: " + str(amount) + "/" + str(player.colamount)
 	
 func _process(delta):
 	if player.goaled == true:

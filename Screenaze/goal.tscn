@@ -12,4 +12,5 @@ script = ExtResource("1_e2heq")
 shape = SubResource("SphereShape3D_rv3tj")
 
 [node name="GoalSprite" type="Sprite3D" parent="."]
+pixel_size = 0.02
 texture = ExtResource("2_i831g")

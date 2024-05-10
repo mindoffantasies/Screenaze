@@ -7,5 +7,6 @@
 script = ExtResource("1_0bipe")
 
 [node name="Loader1" type="Sprite2D" parent="."]
+scale = Vector2(3.03056, 3.03056)
 texture = ExtResource("1_vb06h")
 centered = false

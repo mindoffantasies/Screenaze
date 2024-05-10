@@ -14,16 +14,16 @@ grow_vertical = 2
 script = ExtResource("1_pnl0r")
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(320, 59)
-scale = Vector2(2.5, 3.589)
+position = Vector2(982, 164)
+scale = Vector2(5.08115, 7.2945)
 texture = ExtResource("2_cm17i")
 
 [node name="Result" type="Label" parent="."]
 layout_mode = 0
-offset_left = 74.0
-offset_top = 105.0
-offset_right = 446.0
-offset_bottom = 319.0
+offset_left = 473.0
+offset_top = 259.0
+offset_right = 1493.0
+offset_bottom = 846.0
 theme_override_fonts/font = ExtResource("3_5mowo")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 90
 text = "Collectables: {amount}"

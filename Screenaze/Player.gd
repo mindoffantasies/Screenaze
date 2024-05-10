@@ -9,6 +9,9 @@ var collected = 0
 var minute = 0
 var second = 0
 var goaled = false
+var scn
+var scnnum
+var colamount
 @onready var camera = $"Neck/Camera3D"
 @onready var player = self
 @onready var trans = self.get_global_transform().basis
@@ -20,13 +23,22 @@ const SPEED = 5.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
+	if get_tree().current_scene.name == "Demo":
+		scn = "Demo"
+		scnnum = 0
+		colamount = 5
+	if get_tree().current_scene.name == "testLvl":
+		scn = "Test"
+		scnnum = -1
+		colamount = 1
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	while(goaled == false):
 		second += 1
 		if second == 60:
 			minute += 1
-			second == 0
+			second = 0
 		GUI.update_lvl(minute, second)
 		await get_tree().create_timer(1.0).timeout
 		
