@@ -13,14 +13,6 @@ res://elevator.tscn
 res://CRT.tscn
 res://Loader.tscn
 res://Tiles.tscn
-res://elevator.gd
 res://goal.tscn
-res://Goal.gd
 res://goal_menu.tscn
-res://goal_menu.gd
-res://Player.gd
-res://pause.gd
-res://Hud.gd
-res://secret_test.gd
 res://demo.tscn
-res://btnMainPlay.gd
