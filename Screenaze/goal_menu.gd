@@ -6,7 +6,7 @@ extends Control
 func update_ui(amount, m, s):
 	label.text = "Level: " + str(player.scn) + "\nTime: " + str(m) + ":" + str(s) + "\nCollectables: " + str(amount) + "/" + str(player.colamount)
 	
-func _process(delta):
+func _process(_delta):
 	if player.goaled == true:
 		if Input.is_action_pressed("Enter"):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

@@ -16,7 +16,3 @@ res://Tiles.tscn
 res://goal.tscn
 res://goal_menu.tscn
 res://demo.tscn
-res://Player.gd
-res://goal_menu.gd
-res://Hud.gd
-res://scenechecker.gd

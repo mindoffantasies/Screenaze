@@ -7,7 +7,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var progress = []
 	ResourceLoader.load_threaded_get_status(Globals.next_scene, progress)
 	print(progress)

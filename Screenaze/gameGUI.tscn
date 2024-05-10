@@ -45,6 +45,7 @@ text = "0:0"
 horizontal_alignment = 1
 
 [node name="Lvlnum" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1811.0
 offset_top = 11.0
 offset_right = 1878.0

@@ -23,7 +23,7 @@ sky = SubResource("Sky_int34")
 [node name="testLvl" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_pmatk")]
-transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -2.98054, -0.481249, 1.41242)
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -2.98054, -0.481249, 0.91242)
 
 [node name="Camera3D" parent="Player/Neck" index="0"]
 current = false
