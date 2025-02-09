@@ -34,6 +34,8 @@ func _ready():
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
+	print(goaled)
+	
 	while(goaled == false):
 		second += 1
 		if second == 60:
